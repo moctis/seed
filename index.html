@@ -14,10 +14,10 @@
           d.body.appendChild(el);          
       };
       $.ajax({
-        url: 'https://api.github.com/repos/' + repos + 'git/refs/heads/master', cache: false, dataType: 'jsonp'
+        url: 'https://api.github.com/repos/' + $eed.repos + 'git/refs/heads/master', cache: false, dataType: 'jsonp'
       }).done(function(data) {
         sha = data['data']['object']['sha'];
-        $eed.baseurl = 'https://rawgit.com/'+ repos + sha;
+        $eed.baseurl = 'https://rawgit.com/'+ $eed.repos + sha;
         $eed.script('seed.js');
       }).fail(function() {});
     }());
