@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script async="async" type="text/javascript">
-    (function() {
-      var $eed = {};
-      $eed.repos = 'moctis/seed/';
-      $eed.baseurl = 'https://rawgit.com/'+$eed.repos;
-      $eed = function(url, tag,cb) {
-          var d = document, t = tag?tag:'script', el = d.createElement(t);
-          url = $eed.baseurl + url;
-          if (t=='script') {el.src = url;} else if (t == 'link') {rel = 'stylesheet';el.href = url;}
-          if (cb) {el.addEventListener('load', cb, false);}
-          d.body.appendChild(el);          
-      };
-      $eed('seed.js');
-    }());
-  </script>
-</head>
-<body></body>
+<body>
+<script async="async" type="text/javascript">
+(function() {
+  var $eed = {};
+  $eed.repos = 'moctis/seed/';
+  $eed.baseurl = 'https://rawgit.com/'+$eed.repos;
+  $eed = function(url, tag,cb) {
+      var d = document, t = tag?tag:'script', el = d.createElement(t);
+      url = $eed.baseurl + url;
+      if (t=='script') {el.src = url;} else if (t == 'link') {rel = 'stylesheet';el.href = url;}
+      if (cb) {el.addEventListener('load', cb, false);}
+      d.body.appendChild(el);          
+  };
+  $eed('seed.js');
+}());
+</script>  
+</body>
 </html>
