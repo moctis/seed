@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 
 <html><body><script type="text/javascript">
-$eed={host:'https://rawgit.com', repos:'moctis/seed', sha:'master'};
-$eed.script=function(f,tag,cb) {
-    var url=this.host+'/'+this.repos+'/'+this.sha+'/'+f;
-    var d = document, t = tag?tag:'script', el = d.createElement(t);
-    if (t=='script') {el.src = url;} else if (t == 'link') {rel = 'stylesheet';el.href = url;}
-    if (cb) {el.addEventListener('load', cb, false);}
+$eed={h:"https://rawgit.com",r:"moctis/seed",sha:"master"};
+$eed.script=function(f,t,cb) {
+    var url=this.h+"/"+this.r+"/"+this.sha+"/"+f, d=document, t=t||"script", el=d.createElement(t);
+    (t=="script")?(el.src=url):(t=="link")&&(el.rel="stylesheet",el.href= url);
+    cb && el.addEventListener("load", cb, 0);
     d.body.appendChild(el);
-}; $eed.script('seed.js');
+    return this};
+$eed.css=function(e){return this.script(e,"link"),this}
+$eed.script('seed.js').css('seed.css');
 </script></body></html>
