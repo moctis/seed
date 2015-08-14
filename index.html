@@ -8,6 +8,7 @@ $eed.script=function(f,t,cb) {
     cb && el.addEventListener("load", cb, 0);
     d.body.appendChild(el);
     return this};
-$eed.css=function(e){return this.script(e,"link"),this}
+$eed.css=function(e){return this.script(e,"link"),this};
+$eed.append=function(html) { document.body.insertAdjacentHTML("beforeend", html); return this; };
 $eed.script('seed.js').css('seed.css');
 </script></body></html>
