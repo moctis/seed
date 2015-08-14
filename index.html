@@ -13,7 +13,7 @@
           if (cb) {el.addEventListener('load', cb, false);}
           d.body.appendChild(el);          
       };
-      window.jQuery.ajax({
+      $.ajax({
         url: 'https://api.github.com/repos/' + repos + 'git/refs/heads/master', cache: false, dataType: 'jsonp'
       }).done(function(data) {
         sha = data['data']['object']['sha'];
