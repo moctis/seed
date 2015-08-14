@@ -1,3 +1,6 @@
-document.write('Hello World<br/>');
-document.write('Hello, Moctis<br/>');
-document.write('Hello, Benze<br/>');
+$eed.append=function(html) { document.body.insertAdjacentHTML("beforeend", html); return this; };
+
+$eed
+  .append('Hello World<br/>')
+  .append('Hello, Moctis<br/>')
+  .append('Hello, Benze<br/>');
