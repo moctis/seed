@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <body>
-<script async="async" type="text/javascript">
+<script type="text/javascript">
 (function() {
   $eed = function(file, tag,cb) {
-    var repos='moctis/seed/',url='https://rawgit.com/'+$eed.repos+file;
+    var repos='moctis/seed/',url='https://rawgit.com/'+repos+file;
     var d = document, t = tag?tag:'script', el = d.createElement(t);
     if (t=='script') {el.src = url;} else if (t == 'link') {rel = 'stylesheet';el.href = url;}
     if (cb) {el.addEventListener('load', cb, false);}
