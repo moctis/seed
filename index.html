@@ -2,16 +2,13 @@
 <html>
 <body>
 <script type="text/javascript">
-(function() {
-  $eed = function(file, tag,cb) {
-    var repos='moctis/seed/',url='https://rawgit.com/'+repos+file;
-    var d = document, t = tag?tag:'script', el = d.createElement(t);
-    if (t=='script') {el.src = url;} else if (t == 'link') {rel = 'stylesheet';el.href = url;}
-    if (cb) {el.addEventListener('load', cb, false);}
-    d.body.appendChild(el);          
-  };
-  $eed('seed.js');
-}());
+$eed=function(f,tag,cb) {
+  var repos='moctis/seed/',url='https://rawgit.com/'+repos+f;
+  var d = document, t = tag?tag:'script', el = d.createElement(t);
+  if (t=='script') {el.src = url;} else if (t == 'link') {rel = 'stylesheet';el.href = url;}
+  if (cb) {el.addEventListener('load', cb, false);}
+  d.body.appendChild(el);
+};$eed('seed.js');
 </script>  
 </body>
 </html>
