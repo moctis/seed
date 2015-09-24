@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
-<html><body><script type="text/javascript">
+<html>
+<body>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
 $eed={h:"https://rawgit.com",r:"moctis/seed",sha:"master"};
 $eed.script=function(f,t,cb) {
     var url=this.h+"/"+this.r+"/"+this.sha+"/"+f, d=document, t=t||"script", el=d.createElement(t);
@@ -10,5 +13,10 @@ $eed.script=function(f,t,cb) {
     return this};
 $eed.css=function(e){return this.script(e,"link"),this};
 $eed.append=function(html) { document.body.insertAdjacentHTML("beforeend", html); return this; };
-$eed.script('seed.js').css('seed.css');
+$.ajax({
+        url: 'https://api.github.com/repos/' + $eed.r + 'git/refs/heads/master', cache: false, dataType: 'jsonp'
+      }).done(function(data) {
+        $eed.sha = data['data']['object']['sha'];
+        $eed.script('seed.js').css('seed.css');
+      }).fail(function() {});
 </script></body></html>
