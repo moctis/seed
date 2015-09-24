@@ -18,7 +18,7 @@ $.ajax({
         url: 'https://api.github.com/repos/' + $eed.r + '/git/refs/heads/master', cache: false, dataType: 'jsonp'
       }).done(function(data) {
           console.log(data);
-        $eed.sha = data['object']['sha'];
+        $eed.sha = data['data']['object']['sha'];
         $eed.script('seed.js').css('seed.css');
       }).fail(function() {});
 });
