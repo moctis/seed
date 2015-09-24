@@ -15,7 +15,7 @@ $eed.css=function(e){return this.script(e,"link"),this};
 $eed.append=function(html) { document.body.insertAdjacentHTML("beforeend", html); return this; };
 $(function() {
 $.ajax({
-        url: 'https://api.github.com/repos/' + $eed.r + 'git/refs/heads/master', cache: false, dataType: 'jsonp'
+        url: 'https://api.github.com/repos/' + $eed.r + '/git/refs/heads/master', cache: false, dataType: 'jsonp'
       }).done(function(data) {
           console.log(data);
         $eed.sha = data['object']['sha'];
