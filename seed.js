@@ -1,12 +1,7 @@
+$eed.scriptText=function(txt,cb) {
+    eval(txt); cb && cb();
+    return this};  
+    
 $eed
-  .append('Hello World<br/>')
-  .append('Hello, Moctis<br/>')
-  .append('Hello, Benze<br/>')
-  .append('Hello, Link<br/>')
-  .append('Hello, Wut<br/>')
-  .append('Hello World<br/>')
-  .append('Hello, Moctis<br/>')
-  .append('Hello, Benze<br/>')
-  .append('Hello, Link<br/>')
-  .append('Hello, Wut<br/>')
-  .script('scriptLocalStore.js');
+  .append('Hello World<br/>') 
+  .script('features/localStore/scriptLocalStore.js');
