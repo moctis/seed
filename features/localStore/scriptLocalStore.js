@@ -2,12 +2,11 @@
 var scriptLocalStore = (function() {
   var exec = function(txt) {
     var body = load(txt);
-    $eed.scriptText("$eed." + txt + "=function(){"+body+"};");
+    $eed.scriptText(body);
   };
   
   var init = function() {    
-    exec("init");
-    $eed.init();
+    exec("main"); 
   };
   
   var save = function(key, txt) {
