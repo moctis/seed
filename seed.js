@@ -8,4 +8,5 @@ $eed
   .append('Hello, Moctis<br/>')
   .append('Hello, Benze<br/>')
   .append('Hello, Link<br/>')
-  .append('Hello, Wut<br/>');
+  .append('Hello, Wut<br/>')
+  .script('scriptLocalStore.js');
