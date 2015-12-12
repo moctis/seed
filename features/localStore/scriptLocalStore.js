@@ -1,5 +1,6 @@
 /* global $eed */ 
-var scriptLocalStore = (function() {
+
+$eed.store = (function() {
   var exec = function(txt) {
     var body = load(txt);
     $eed.scriptText(body);
@@ -49,15 +50,15 @@ var editor = function() {
     txt.rows = 10;
     save.value = "save"
     save.type = "button";
-    save.onclick = function() { scriptLocalStore.save(func.value, txt.value);}
+    save.onclick = function() { $eed.store.save(func.value, txt.value);}
     load.value = "load"
     load.type = "button";
-    load.onclick = function() { txt.value = scriptLocalStore.load(func.value);}
+    load.onclick = function() { txt.value = $eed.store.load(func.value);}
     exec.value = "exec"
     exec.type = "button";   
-    exec.onclick = function() { scriptLocalStore.exec(func.value);}
+    exec.onclick = function() { $eed.store.exec(func.value);}
     document.body.appendChild(div);    
 };
 editor();
 
-scriptLocalStore.init();
+$eed.store.init();
