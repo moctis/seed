@@ -3,4 +3,4 @@ index.html
 seed.css
 seed.js
 features/localStore/scriptLocalStore.js
-https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js
+http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js
