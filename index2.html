@@ -7,7 +7,7 @@
 <body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript">
-$eed={h:"http://localhost:8888"};
+$eed={h:""};
 $eed.script=function(f,t,cb) {
     var url=this.h+"/"+f, d=document, t=t||"script", el=d.createElement(t);
     (t=="script")?(el.src=url):(t=="link")&&(el.rel="stylesheet",el.href= url);
