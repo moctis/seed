@@ -3,5 +3,5 @@ $eed.scriptText=function(txt,cb) {
     return this};  
     
 $eed
-  .append('Hello World<br/>') 
+  .append('Hello World 1234<br/>') 
   .script('features/localStore/scriptLocalStore.js');
